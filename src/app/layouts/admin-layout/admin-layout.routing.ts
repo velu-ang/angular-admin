@@ -9,6 +9,8 @@ import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { EnquiryComponent } from '../../enquiry/enquiry.component';
+import { NeweventComponent } from '../../event/newevent.component';
+import { NewblogsComponent } from '../../blog/newblogs.component';
 // import { LoginComponent } from '../../login/login.component';
 
 export const AdminLayoutRoutes: Routes = [
@@ -54,14 +56,32 @@ export const AdminLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'users',   component: UserComponent },
-    { path: 'events',     component: EventComponent },
-    { path: 'blogs',     component: BlogComponent },
-    { path: 'food',          component: FoodComponent },
-    { path: 'maps',           component: MapsComponent },
-    { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
-    { path: 'enquiry',        component: EnquiryComponent },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'users', component: UserComponent },
+    {
+        path: 'events',
+        children: [{
+            path: "",
+            component: EventComponent,
+        },
+        {
+            path: "new",
+            component: NeweventComponent
+        }]
+    },
+    { path: 'blogs',
+    children: [{
+        path: "",
+        component: BlogComponent 
+    },{
+        path: "new",
+        component: NewblogsComponent
+    }]},
+    { path: 'food', component: FoodComponent },
+    { path: 'maps', component: MapsComponent },
+    { path: 'notifications', component: NotificationsComponent },
+    { path: 'upgrade', component: UpgradeComponent },
+    { path: 'enquiry', component: EnquiryComponent },
+    { path: 'newevent', component: NeweventComponent },
     // { path: 'login',        component: LoginComponent },
 ];

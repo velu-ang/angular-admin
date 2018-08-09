@@ -1,0 +1,42 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-plain">
+          <div class="card-header card-header-danger row">
+            Add New Blog
+          </div>
+          <div class="card-body">
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Blog Title" [(ngModel)]="blog.title" name="title" type="text">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6" (click)="openFile()">
+                      <i class="material-icons">
+                          attach_file
+                          </i>
+                  </div>
+  
+                  <input type="file" id="openBut" style="display: none">
+                </div> 
+                <div class="row">
+                  <div class="col-md-6">
+                    <mat-form-field class="example-full-width">
+                      <textarea matInput [(ngModel)]="blog.content" name="content" placeholder="Blog Content"></textarea>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <button mat-raised-button (click)="postBlog()" type="submit" class="btn btn-danger pull-right">Upload Blog</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

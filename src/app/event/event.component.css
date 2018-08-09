@@ -1,0 +1,7 @@
+.add-blog{
+    font-size: 44px !important;
+    cursor: pointer;
+}
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #f44336 !important;
+}

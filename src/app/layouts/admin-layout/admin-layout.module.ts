@@ -13,13 +13,17 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { EnquiryComponent } from '../../enquiry/enquiry.component';
 // import { LoginComponent } from '../../login/login.component';
+import { NeweventComponent } from '../../event/newevent.component';
+import { NewblogsComponent } from '../../blog/newblogs.component';
 
 import {
   MatButtonModule,
   MatInputModule,
   MatRippleModule,
   MatTooltipModule,
+  MatProgressSpinnerModule,
 } from '@angular/material';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -29,6 +33,7 @@ import {
     MatRippleModule,
     MatInputModule,
     MatTooltipModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     DashboardComponent,
@@ -41,6 +46,8 @@ import {
     NotificationsComponent,
     UpgradeComponent,
     EnquiryComponent,
+    NeweventComponent,
+    NewblogsComponent
   ]
 })
 

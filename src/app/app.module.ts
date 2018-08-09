@@ -28,9 +28,12 @@ import {
   MatInputModule,
   MatRippleModule,
   MatTooltipModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 import { GeneralService } from './general.service';
 import { HttpClientModule } from '@angular/common/http';
+// import { NewblogsComponent } from './blog/newblogs.component';
+// import { NeweventComponent } from './event/newevent.component';
 
 @NgModule({
   imports: [
@@ -43,6 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatRippleModule,
     MatTooltipModule,
+    MatProgressSpinnerModule,
     RouterModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
@@ -52,7 +56,9 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginComponent
+    LoginComponent,
+    // NewblogsComponent,
+    // NeweventComponent
 
   ],
   providers: [GeneralService],

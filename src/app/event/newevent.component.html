@@ -1,0 +1,42 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-plain">
+          <div class="card-header card-header-danger row">
+            Add New Event
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Event Title" [(ngModel)]="event.title" name="title" type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" (click)="openFile()">
+                    <i class="material-icons">
+                        attach_file
+                        </i>
+                </div>
+
+                <input type="file" id="openBut" style="display: none">
+              </div> 
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <textarea matInput [(ngModel)]="event.content" name="content" placeholder="Event Content"></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+              <button mat-raised-button (click)="postEvent()" type="submit" class="btn btn-danger pull-right">Upload Blog</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
