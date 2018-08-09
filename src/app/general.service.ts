@@ -34,4 +34,7 @@ export class GeneralService {
     blog.member_id = 1;
     return this.http.post(this.baseUrl + 'events',{'event': blog}, { headers: this.headers });
   }
+  getDashboardData(){
+    return this.http.get(this.baseUrl + "admins/dashboard", { headers: this.headers });
+  }
 }
