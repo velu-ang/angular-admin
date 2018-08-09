@@ -29,17 +29,20 @@ import {
   MatRippleModule,
   MatTooltipModule,
 } from '@angular/material';
+import { GeneralService } from './general.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     ComponentsModule,
-      MatButtonModule,
-  MatInputModule,
-  MatRippleModule,
-  MatTooltipModule,
+    MatButtonModule,
+    MatInputModule,
+    MatRippleModule,
+    MatTooltipModule,
     RouterModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
@@ -52,7 +55,7 @@ import {
     LoginComponent
 
   ],
-  providers: [],
+  providers: [GeneralService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
