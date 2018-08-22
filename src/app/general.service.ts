@@ -8,7 +8,7 @@ export class GeneralService {
   baseUrl: any = environment.url;
   constructor(public http: HttpClient) {
     this.headers = new HttpHeaders({
-      "Content-Type": "application/json",
+      // "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*"
     });
   }
@@ -26,8 +26,9 @@ export class GeneralService {
   }
   blogPost(blog): Observable<any> {
     console.log(blog);
-    blog.member_id = 1;
-    return this.http.post(this.baseUrl + 'blogs',{'blog': blog}, { headers: this.headers });
+    this.headers['Content-Type'] ='multipart/form-data';
+    // blog.member_id = 1;
+    return this.http.post(this.baseUrl + 'blogs',blog, { headers: this.headers });
   }
   eventPost(blog): Observable<any> {
     console.log(blog);
