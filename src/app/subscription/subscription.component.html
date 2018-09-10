@@ -105,90 +105,90 @@
 </div>
  -->
 
-<div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card card-plain">
-                    <div class="card-header card-header-danger">
-                        <h4 class="card-title mt-0"> Users</h4>
-                        <p class="card-category"> Here is a subtitle for this table</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead class="">
-                                    <th>
-                                        ID
-                                    </th>
-                                    <th>
-                                        Name
-                                    </th>
-                                    <th>
-                                        Mobile
-                                    </th>
-                                    <th>
-                                        Address
-                                    </th>
-                                    <th>
-                                        User Reg Number
-                                    </th>
-                                    <th>
-                                        Action
-                                    </th>
-                                </thead>
-                                <tbody *ngIf="!isLoading">
-                                    <tr *ngFor="let user of users; let i = index">
-                                        <td>
-                                            {{i}}
-                                        </td>
-                                        <td>
-                                            {{user.name}}
-                                        </td>
-                                        <td>
-                                            {{user.mobile}}
-                                        </td>
-                                        <td>
-                                            {{user.address}}
-                                        </td>
-                                        <td>
-                                            {{user.id}}
-                                        </td>
-                                        <td>
-                                            <button mat-raised-button class="btn btn-primary">
-                                                <i class="material-icons">
-                                                    visibility
-                                                </i>
-                                            </button>
-                                           
-                                            <button mat-raised-button class="btn btn-danger">
-                                                <i class="material-icons">
-                                                    delete_forever
-                                                </i>
-                                            </button>
-                                        </td>
-                                    </tr>
+ <div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card card-plain">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title mt-0"> Users</h4>
+                      <p class="card-category"> Here is a subtitle for this table</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table table-hover">
+                              <thead class="">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Subscriber Name
+                                  </th>
+                                  <th>
+                                      Package
+                                  </th>
+                                  <th>
+                                      End Date
+                                  </th>
+                                  <th>
+                                      Price
+                                  </th>
+                                  <th>
+                                      Action
+                                  </th>
+                              </thead>
+                              <tbody *ngIf="!isLoading">
+                                  <tr *ngFor="let sub of subscription; let i = index">
+                                      <td>
+                                          {{sub.id}}
+                                      </td>
+                                      <td>
+                                          {{sub.member.name}}
+                                      </td>
+                                      <td>
+                                          {{sub.package.pack_type}}
+                                      </td>
+                                      <td>
+                                          {{sub.end_date}}
+                                      </td>
+                                      <td>
+                                          {{sub.price}}
+                                      </td>
+                                      <td>
+                                          <button mat-raised-button class="btn btn-primary">
+                                              <i class="material-icons">
+                                                  visibility
+                                              </i>
+                                          </button>
+                                         
+                                          <button mat-raised-button class="btn btn-danger">
+                                              <i class="material-icons">
+                                                  delete_forever
+                                              </i>
+                                          </button>
+                                      </td>
+                                  </tr>
 
 
-                                </tbody>
-                                <tbody *ngIf="isLoading">
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
-                                            </mat-progress-spinner>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                              </tbody>
+                              <tbody *ngIf="isLoading">
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td>
+                                          <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
+                                          </mat-progress-spinner>
+                                      </td>
+                                      <td></td>
+                                      <td></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>

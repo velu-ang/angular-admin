@@ -32,8 +32,6 @@ import {
 } from '@angular/material';
 import { GeneralService } from './general.service';
 import { HttpClientModule } from '@angular/common/http';
-// import { NewblogsComponent } from './blog/newblogs.component';
-// import { NeweventComponent } from './event/newevent.component';
 
 @NgModule({
   imports: [

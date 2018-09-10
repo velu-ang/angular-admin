@@ -1,3 +1,4 @@
+import { PackageComponent } from './../../package/package.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -23,6 +24,7 @@ import {
   MatTooltipModule,
   MatProgressSpinnerModule,
 } from '@angular/material';
+import { SubscriptionComponent } from '../../subscription/subscription.component';
 
 @NgModule({
   imports: [
@@ -47,7 +49,9 @@ import {
     UpgradeComponent,
     EnquiryComponent,
     NeweventComponent,
-    NewblogsComponent
+    NewblogsComponent,
+    SubscriptionComponent,
+    PackageComponent
   ]
 })
 

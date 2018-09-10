@@ -11,6 +11,8 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { EnquiryComponent } from '../../enquiry/enquiry.component';
 import { NeweventComponent } from '../../event/newevent.component';
 import { NewblogsComponent } from '../../blog/newblogs.component';
+import { SubscriptionComponent } from '../../subscription/subscription.component';
+import { PackageComponent } from '../../package/package.component';
 // import { LoginComponent } from '../../login/login.component';
 
 export const AdminLayoutRoutes: Routes = [
@@ -78,6 +80,8 @@ export const AdminLayoutRoutes: Routes = [
         component: NewblogsComponent
     }]},
     { path: 'food', component: FoodComponent },
+    { path: 'subscribe', component: SubscriptionComponent },
+    { path: 'package', component: PackageComponent },
     { path: 'maps', component: MapsComponent },
     { path: 'notifications', component: NotificationsComponent },
     { path: 'upgrade', component: UpgradeComponent },

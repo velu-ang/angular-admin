@@ -8,12 +8,14 @@ export class GeneralService {
   baseUrl: any = environment.url;
   constructor(public http: HttpClient) {
     this.headers = new HttpHeaders({
-      // "Content-Type": "application/json",
+      "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*"
     });
   }
 
-
+login(data): Observable<any> {
+  return this.http.post(this.baseUrl + 'admins/login',data, { headers: this.headers });
+}
   getUsers(): Observable<any> {
     return this.http.get(this.baseUrl + 'members', { headers: this.headers });
   }
@@ -35,7 +37,14 @@ export class GeneralService {
     blog.member_id = 1;
     return this.http.post(this.baseUrl + 'events',{'event': blog}, { headers: this.headers });
   }
-  getDashboardData(){
+  getDashboardData(): Observable<any>{
     return this.http.get(this.baseUrl + "admins/dashboard", { headers: this.headers });
+  }
+
+  getSubscribe(): Observable<any>{
+    return this.http.get(this.baseUrl + "subscriptions", { headers: this.headers })
+  }
+  getPackage(): Observable<any>{
+    return this.http.get(this.baseUrl + "packages", { headers: this.headers })
   }
 }
